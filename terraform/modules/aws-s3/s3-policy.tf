@@ -1,10 +1,3 @@
-resource "aws_s3_bucket" "lambda-s3" {
-  bucket = "s3-exmaple-lambda-test-foo-bar"
-
-  tags = {
-    Name = "Example Lambda Bucket"
-  }
-}
 data "aws_iam_policy_document" "allow_lambda_access" {
   statement {
     effect  = "Allow"
@@ -21,7 +14,7 @@ data "aws_iam_policy_document" "allow_lambda_access" {
 }
 
 resource "aws_s3_bucket_policy" "allow_lambda_access" {
-  bucket = aws_s3_bucket.lambda-s3.id
+  bucket = aws_s3_bucket.this.id
 
   policy = data.aws_iam_policy_document.allow_lambda_access.json
 }

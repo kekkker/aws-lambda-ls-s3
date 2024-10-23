@@ -5,3 +5,4 @@ bastion.tf
 .terraform/*
 terraform.tfstate*
 .terraform*
+*.txt
