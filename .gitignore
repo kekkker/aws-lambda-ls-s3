@@ -1,0 +1,6 @@
+aws/
+*.zip
+vpc.tf
+.terraform/*
+terraform.tfstate*
+.terraform*
