@@ -1,3 +1,6 @@
+import boto3
+import botocore
+
 def handler(event, context):
     # TODO implement
     return {

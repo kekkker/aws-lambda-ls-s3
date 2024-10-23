@@ -1,6 +1,7 @@
 aws/
 *.zip
 vpc.tf
+bastion.tf
 .terraform/*
 terraform.tfstate*
 .terraform*
