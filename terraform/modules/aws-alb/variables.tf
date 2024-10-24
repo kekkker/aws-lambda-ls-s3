@@ -57,3 +57,16 @@ variable "lb_lambda_name" {
 
   description = "Name of the Lambda where traffic will go"
 }
+
+variable "lb_ssl_policy" {
+  type    = string
+  default = "ELBSecurityPolicy-2016-08"
+
+  description = "SSL Policy"
+}
+
+variable "lb_certificate_arn" {
+  type = string
+
+  description = "ARN of the certificate for SSL"
+}
