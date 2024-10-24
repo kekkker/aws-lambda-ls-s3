@@ -21,14 +21,14 @@ def handler(event, context):
         logging.error("The S3 bucket name wasn't specified.")
         return {
             "statusCode": 500,
-            "statusMessage": "Internal Server Error",  # updated to match HTTP status code
+            "statusMessage": "Internal Server Error",
             "isBase64Encoded": False,
             "headers": {"Content-Type": "application/json"},
-            "body": f'{{"message": "{ERROR_MESSAGE}"}}',  # use f-string for formatting
+            "body": f'{{"message": "{ERROR_MESSAGE}"}}',
         }
 
     try:
-        files = get_files(s3_bucket_name)  # pass the bucket name as an argument
+        files = get_files(s3_bucket_name)
         return {
             "statusCode": 200,
             "statusMessage": "OK",
